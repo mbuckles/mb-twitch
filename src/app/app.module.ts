@@ -4,7 +4,7 @@ import { HttpClientModule} from '@angular/common/http'; // add this for api
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+// import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { appRoutes } from '../routes';
 
@@ -17,6 +17,8 @@ import { LocationService } from './services/location.service';
 import { WeatherComponent } from './weather/weather.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { SearchComponent } from './search/search.component';
     SearchComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),HttpClientModule,
     FormsModule,
     MaterialModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
+    // RouterModule.forRoot(appRoutes),
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
+    AppRoutingModule,
+    RouterModule,
   ],
   providers: [WeatherService, LocationService],
   bootstrap: [AppComponent]

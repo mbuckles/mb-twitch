@@ -19,8 +19,9 @@
   text-align: center;
   margin: auto;
 }
-.pixabayLogo{
-  width: 200px;
+.Logo{
+  width: 110px;
+  background: transparent;
 }
 .title{
   font-size: 3.6em;
