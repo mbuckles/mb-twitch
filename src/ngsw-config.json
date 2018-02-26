@@ -23,14 +23,19 @@
         "/assets/**"
       ],
       "urls": [
-        "http://fonts.googleapis.com/**"
+        "http://fonts.googleapis.com/**",
+        "https://fonts.googleapis.com/css?family=Roboto+Slab",
+        "http://api.openweathermap.org/data/2.5/",
+        "https://ipinfo.io/json",
+        "http://localhost:8080/**",
+        "https://weather-app-44d0d.firebaseapp.com/**"
       ]
     }
    }],
    "dataGroups": [
      {
-       "name": "task-users-api",
-       "urls": ["/tasks", "/users"],
+      "name": "search-weather-api",
+       "urls": ["/services/location", "/services/weather"],
        "cacheConfig": {
          "strategy": "freshness",
          "maxSize": 20,

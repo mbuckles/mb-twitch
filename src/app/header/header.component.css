@@ -1,0 +1,33 @@
+.column-layout {
+  width: 100%;
+  background-color: transparent!important;
+  display: flex;
+  padding: 15px;
+}
+.main-column {
+  flex: 2;
+  text-align: center;
+  /* min-width: 450px; */
+}
+.sidebar-one {
+  flex: 1;
+  margin: auto;
+  text-align: center;
+}
+.sidebar-two {
+  flex: 1;
+  text-align: center;
+  margin: auto;
+}
+.pixabayLogo{
+  width: 200px;
+}
+.title{
+  font-size: 3.6em;
+  font-family: 'Roboto Slab', serif;
+}
+.img-button {
+  margin-bottom: 5px;
+  background-color: rgb(202, 59, 23);
+  color: #fff;
+  }

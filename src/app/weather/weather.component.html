@@ -1,3 +1,71 @@
-<p>
-  weather works!
-</p>
+<div class="body">
+  <mat-card [ngClass]="{rain: city.description.includes('rain', 0),
+  clearSky: city.description.includes('clouds', 0),
+  thunderstorm: city.description.includes('thunderstorm', 0),
+  snow: city.description.includes('snow', 0),
+  mist: city.description.includes('mist', 0),
+  drizzle: city.description.includes('drizzle', 0),
+  sleet: city.description.includes('sleet', 0),
+  clear: city.description.includes('clear', 0),
+  fog: city.description.includes('fog', 0)
+}">
+
+<p>You can get your local weather in one of 40,000 cities or your zip code to be more precise. Where do you want to go today?</p>
+
+
+<div class="if-searching" *ngIf="searching">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<section>
+  <div class="title1">
+    <span class="title2"><h1>{{city.name}}, {{city.country}} - Current Weather</h1></span>
+  </div>
+  <div class="title3">
+    <div class="title3">
+      <p>{{ dateVal | date: 'M/d/y' }}</p>
+      <p><img src="https://openweathermap.org/img/w/{{city.icon}}.png"/></p>
+      <p>{{ dateVal | date: 'shortTime' }}</p>
+      <p>{{'Conditions: ' + city.description}}</p>
+      <p>{{'Temp: ' + (city.temp | number: '1.0-0')}}&#8457; </p>
+      <p>{{'Pressure: ' + (city.pressure | number: '1.1-2') + ' hPa'}}</p>
+      <p>{{'Wind: ' +  (city.speed | number: '1.0-0')}} mph</p>
+      <p>{{'Wind Direction: ' + (city.deg | number: '1.0-0')}}&#176;</p>
+      <p>{{'Humidity: ' + city.humidity}}&#37;</p>
+      <p>{{'Location:   Lat: ' + city.lat + ',  Lon: ' + city.lon}}</p>
+    </div>
+  </div>
+</section>
+
+<div class="title1">
+  <span class="title2"><h1>{{forecast.name}}, {{forecast.country}} - 5 Day Forecast</h1></span>
+</div>
+<section class="fixed-size-container">
+  <div class="fixed-size">
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon1}}.png"/></p>
+    <p>{{forecast.description1}}</p>
+    <p class="content text-center">{{'Temp: ' + (forecast.temp1 | number: '1.0-0')}}&#8457; </p>
+  </div>
+  <div class="fixed-size">
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon2}}.png"/></p>
+    <p>{{forecast.description2}}</p>
+    <p class="content text-center">{{'Temp: ' + (forecast.temp2 | number: '1.0-0')}}&#8457; </p>
+  </div>
+  <div class="fixed-size">
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon3}}.png"/></p>
+    <p>{{forecast.description3}}</p>
+    <p class="content text-center">{{'Temp: ' + (forecast.temp3 | number: '1.0-0')}}&#8457; </p>
+  </div>
+  <div class="fixed-size">
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon4}}.png"/></p>
+    <p>{{forecast.description4}}</p>
+    <p class="content text-center">{{'Temp: ' + (forecast.temp4 | number: '1.0-0')}}&#8457; </p>
+  </div>
+  <div class="fixed-size">
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon5}}.png"/></p>
+    <p>{{forecast.description5}}</p>
+    <p class="content text-center">{{'Temp: ' + (forecast.temp5 | number: '1.0-0')}}&#8457; </p>
+  </div>
+</section>
+</mat-card>
+</div>

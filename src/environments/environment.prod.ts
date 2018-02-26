@@ -5,7 +5,7 @@ export const environment = {
    WEATHER_CITY: 'http://api.openweathermap.org/data/2.5/weather?q=',
    WEATHER_ZIP: 'http://api.openweathermap.org/data/2.5/weather?zip=',
    WEATHER_POS: 'http://api.openweathermap.org/data/2.5/weather?',
-   // LOCATION_URL: 'http://ip-api.com/json',
+  //  LOCATION_URL: 'http://ip-api.com/json',
    LOCATION_URL: 'https://ipinfo.io/json',
    CURRENT_URL: 'http://api.openweathermap.org/data/2.5/weather?lat=',
 
