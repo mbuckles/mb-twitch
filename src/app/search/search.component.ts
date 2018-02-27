@@ -85,7 +85,7 @@ export class SearchComponent implements OnInit {
   // Current weather
   public getCity() {
     this.locationService.getLocation().subscribe((data: Name) => {
-      console.log(data);
+      // console.log(data);
       return this.searchCityImp(data.city);
       // return this.currentLocation = new Name(data.city, data.zip);
     });

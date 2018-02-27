@@ -1,17 +1,23 @@
 .column-layout {
   width: 100%;
   background-color: transparent!important;
-  display: flex;
+  /* display: flex; */
   padding: 15px;
 }
-.main-column {
-  flex: 2;
-  text-align: center;
-  /* min-width: 450px; */
+@media (min-width: 900px) {
+  .column-layout {
+    display: flex;
+  }
 }
-.sidebar-one {
+.main-column {
   flex: 1;
-  margin: auto;
+ text-align: center
+}
+.sidebar-one[_ngcontent-c1] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-top: 35px;
   text-align: center;
 }
 .sidebar-two {
@@ -24,7 +30,7 @@
   background: transparent;
 }
 .title{
-  font-size: 3.6em;
+  font-size: 3.0em;
   font-family: 'Roboto Slab', serif;
 }
 .img-button {

@@ -1,6 +1,5 @@
-<div class="body">
-
-  <mat-card [ngClass]="{rain: city.description.includes('rain', 0),
+<div class="container">
+  <div id="body" [ngClass]="{rain: city.description.includes('rain', 0),
   clearSky: city.description.includes('clouds', 0),
   thunderstorm: city.description.includes('thunderstorm', 0),
   snow: city.description.includes('snow', 0),
@@ -10,18 +9,25 @@
   clear: city.description.includes('clear', 0),
   fog: city.description.includes('fog', 0)
 }">
-<p>You can get your local weather in one of 40,000 cities or your zip code to be more precise. Where do you want to go today?</p>
+
+<div class="banner">
+  <div class="center-me">
+    <p>You can get your local weather in one of 40,000 cities or your zip code to be more precise. Where do you want to go today?</p>
+  </div>
+</div>
+
 <div class="if-searching" *ngIf="searching">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<section>
+
+<div class="container">
   <div class="title1">
     <span class="title2"><h1>{{city.name}}, {{city.country}} - Current Weather</h1></span>
   </div>
   <div class="title3">
-    <div class="title3">
+    <div class="title4">
       <p>{{ dateVal | date: 'M/d/y' }}</p>
-      <p><img src="https://openweathermap.org/img/w/{{city.icon}}.png alt='city icon'"/></p>
+      <p><img src="https://openweathermap.org/img/w/{{city.icon}}.png" alt="city icon"/></p>
       <p>{{ dateVal | date: 'shortTime' }}</p>
       <p>{{'Conditions: ' + city.description}}</p>
       <p>{{'Temp: ' + (city.temp | number: '1.0-0')}}&#8457; </p>
@@ -32,7 +38,7 @@
       <p>{{'Location:   Lat: ' + city.lat + ',  Lon: ' + city.lon}}</p>
     </div>
   </div>
-</section>
+</div>
 
 <div class="forecast-inputs">
   <div class="input1">
@@ -47,37 +53,39 @@
   </div>
 </div>
 <!-- forecast block -->
+
 <div class="title1">
   <span class="title2"><h1>{{forecast.name}}, {{forecast.country}} - 5 Day Forecast</h1></span>
 </div>
 
-<section class="fixed-size-container">
+<div class="fixed-size-container">
   <div class="fixed-size">
-    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon1}}.png alt='city icon'"/></p>
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon1}}.png" alt='city icon'/></p>
     <p>{{forecast.description1}}</p>
     <p class="content text-center">{{'Temp: ' + (forecast.temp1 | number: '1.0-0')}}&#8457; </p>
   </div>
   <div class="fixed-size">
-    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon2}}.png alt='city icon'"/></p>
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon2}}.png" alt='city icon'/></p>
     <p>{{forecast.description2}}</p>
     <p class="content text-center">{{'Temp: ' + (forecast.temp2 | number: '1.0-0')}}&#8457; </p>
   </div>
   <div class="fixed-size">
-    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon3}}.png alt='city icon'"/></p>
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon3}}.png" alt='city icon'/></p>
     <p>{{forecast.description3}}</p>
     <p class="content text-center">{{'Temp: ' + (forecast.temp3 | number: '1.0-0')}}&#8457; </p>
   </div>
   <div class="fixed-size">
-    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon4}}.png alt='city icon'"/></p>
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon4}}.png" alt='city icon'/></p>
     <p>{{forecast.description4}}</p>
     <p class="content text-center">{{'Temp: ' + (forecast.temp4 | number: '1.0-0')}}&#8457; </p>
   </div>
   <div class="fixed-size">
-    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon5}}.png alt='city icon'"/></p>
+    <p class="content text-center"><img src="https://openweathermap.org/img/w/{{forecast.icon5}}.png" alt='city icon'/></p>
     <p>{{forecast.description5}}</p>
     <p class="content text-center">{{'Temp: ' + (forecast.temp5 | number: '1.0-0')}}&#8457; </p>
   </div>
-</section>
+</div>
+
 <div class="forecast-inputs">
   <div class="input1">
     <mat-input-container>
@@ -92,5 +100,5 @@
     <button mat-raised-button class="searchButton" (click)="searchZipForecastImp(searchZipForecastQuery)" type="button">Forecast by Zip</button>
   </div>
 </div>
-</mat-card>
+</div>
 </div>
