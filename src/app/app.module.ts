@@ -28,12 +28,12 @@ import { RouterModule } from '@angular/router';
     SearchComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),HttpClientModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    HttpClientModule,
     FormsModule,
     MaterialModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    // RouterModule.forRoot(appRoutes),
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
     AppRoutingModule,
     RouterModule,
