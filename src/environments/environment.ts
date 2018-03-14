@@ -9,8 +9,8 @@ export const environment = {
    WEATHER_APIKEY: '&appid=691c1e153351f780c9a6e0268402a27b',
    WEATHER_CITY: 'http://api.openweathermap.org/data/2.5/weather?q=',
    WEATHER_ZIP: 'http://api.openweathermap.org/data/2.5/weather?zip=',
-   LOCATION_URL: 'http://ip-api.com/json',
-  //  LOCATION_URL: 'https://ipinfo.io/json',
+  //  LOCATION_URL: 'http://ip-api.com/json',
+   LOCATION_URL: 'https://ipinfo.io/json',
    CURRENT_URL: 'http://api.openweathermap.org/data/2.5/weather?lat=',
 
    // forecast api
