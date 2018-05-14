@@ -25,7 +25,6 @@
       "urls": [
         "http://fonts.googleapis.com/**",
         "https://fonts.googleapis.com/css?family=Roboto+Slab",
-        "http://api.openweathermap.org/data/2.5/",
         "https://ipinfo.io/json",
         "http://localhost:8080/**",
         "https://weather-app-44d0d.firebaseapp.com/**"
