@@ -40,7 +40,7 @@ export class WeatherComponent implements OnInit {
     this.city.humidity = data.main.humidity;
     this.city.lon = data.coord.lon;
     this.city.lat = data.coord.lat;
-  //  console.log(data);
+   console.log(data);
   }
 
 
@@ -86,7 +86,8 @@ export class WeatherComponent implements OnInit {
   // Current weather
   public getCity() {
     this.locationService.getLocation().subscribe((data: Name) => {
-      return this.searchCityImp(data.city);
+      // console.log(data);
+      // return this.searchCityImp(data.city);
     });
   }
 

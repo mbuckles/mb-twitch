@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="forecast-inputs">
+        <div class="input1">
+          <mat-input-container>
+            <input type="text" class="search" matInput [(ngModel)]="searchTwitchQuery" matInput placeholder="Enter New User" />
+          </mat-input-container>
+          <button mat-raised-button class="searchButton" (click)="searchTwitch(searchTwitchQuery)" type="button">New User</button>
+        </div>
+    </div>
+
+    <div class="header">
+      <div class="header1">Channel</div>
+      <div class="header1">Views</div>
+      <div class="header1">Display Name</div>
+      <div class="header1">Followers</div>
+      <div class="header1">Description</div>
+    </div>
+      <ul *ngFor="let follow of twitch.follows">
+        <li>
+          <a href="{{follow.channel.logo}}"><img src="{{follow.channel.logo}}" alt="logo"></a>
+        </li>
+        <li>
+          {{follow.channel.views}}
+        </li>
+        <li>
+          {{follow.channel.name}}
+        </li>
+        <li>
+          {{follow.channel.followers}}
+        </li>
+        <li class="description">
+          {{follow.channel.status}}
+        </li>
+      </ul>
+  </div>

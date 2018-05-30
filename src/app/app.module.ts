@@ -4,28 +4,25 @@ import { HttpClientModule} from '@angular/common/http'; // add this for api
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { appRoutes } from '../routes';
-
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
-import { WeatherService } from './services/weather.service';
-import { LocationService } from './services/location.service';
-import { WeatherComponent } from './weather/weather.component';
+import { TwitchService } from './services/twitch.service';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { TwitchComponent } from './twitch/twitch.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    TwitchComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -38,7 +35,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     RouterModule,
   ],
-  providers: [WeatherService, LocationService],
+  providers: [TwitchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
