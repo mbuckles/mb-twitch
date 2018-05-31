@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchComponent } from '../app/search/search.component';
 import { TwitchComponent } from '../app/twitch/twitch.component';
 
 const routes: Routes = [

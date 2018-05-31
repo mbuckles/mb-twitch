@@ -24,7 +24,7 @@ export class TwitchComponent implements OnInit {
     this.twitch.status = data.follows[0].channel.status;
     this.twitch.views = data.follows[0].channel.views;
     this.twitch.followers = data.follows[0].channel.followers;
-    console.log(data.follows);
+    console.log(data);
   }
 
   handleError(error) {

@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { TwitchService } from './services/twitch.service';
 import { HeaderComponent } from './header/header.component';
-import { SearchComponent } from './search/search.component';
 import { TwitchComponent } from './twitch/twitch.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -21,7 +20,6 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent,
     TwitchComponent
   ],
   imports: [

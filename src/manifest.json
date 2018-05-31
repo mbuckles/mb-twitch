@@ -1,6 +1,6 @@
 {
-  "short_name": "NG-Weather",
-  "name": "Angular 5.0 Weather App",
+  "short_name": "Twitch",
+  "name": "Angular 5.0 Twitch App",
   "start_url": "/",
 
   "theme_color": "#f48c5b",
